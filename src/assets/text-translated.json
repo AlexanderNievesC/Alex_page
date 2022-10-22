@@ -1,0 +1,11 @@
+{
+  "english": {
+    "Presentation": "Hi my name is Alexander",
+    "Description": "I'm a person who want to work"
+  },
+
+  "spanish": {
+    "Presentation": "Hola mi nombre es Paul",
+    "Description": "Soy una persona que quiere trabajar"
+  }
+}
