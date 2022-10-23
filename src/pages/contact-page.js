@@ -21,8 +21,9 @@ const StyledP = styled.p`
 `;
 
 const StyledForm = styled.form`
-  padding:450px;
-  display: grid;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
   gap:10px;
   text-align: center;
   padding-top: 10px;

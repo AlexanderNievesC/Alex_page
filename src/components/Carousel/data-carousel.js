@@ -1,7 +1,7 @@
 const DataCarousel = [
   {
     id: 1,
-    title: "Get that Job",
+    title: "Get that Job (Ruby + React)",
     description:
       "Created with React and Ruby on rails, trying to find a job?",
     link: "https://github.com/paulnc27/Get_that_job",
@@ -10,7 +10,7 @@ const DataCarousel = [
   },
   {
     id: 2,
-    title: "Get data from an API",
+    title: "Get data from an API (React)",
     description:
       "Created with React. Do you want to see the results?",
     link: "https://github.com/paulnc27/Api_request_table",
@@ -19,7 +19,7 @@ const DataCarousel = [
   },
   {
     id: 3,
-    title: "Classroom with Flusher",
+    title: "Classroom (React+Flusher+Ruby)",
     description:
       "Created with Ruby on Rails and React. Do you want to chat with someone?",
     link: "https://github.com/paulnc27/Classroom-with-Flusher",
@@ -28,7 +28,7 @@ const DataCarousel = [
   },
   {
     id: 4,
-    title: "Pokemon App",
+    title: "Pokemon App (React)",
     description: "Created with React. Choose your Pokemon now",
     button:"Look",
     imagen:"pokemon.gif",

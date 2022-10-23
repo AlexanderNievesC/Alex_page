@@ -12,6 +12,14 @@ const DivStyled = styled.div`
   text-align: center;
   /* margin-top: 10px; */
   align-items: center;
+
+  @media screen and (max-width: 500px){
+     display:flex;
+     flex-direction: column;
+     align-items:center;
+     gap:-200px;
+   }
+
 `;
 
 const StyledH1 = styled.h1`
