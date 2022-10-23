@@ -33,7 +33,7 @@ const StyledList = styled.div`
      flex-direction:column;
      background-color:${colors.yellow[300]};
      top:80px;
-     left:${((open)=>open? "0px":"-500px")};
+     left:${((open)=>open? "-500px":"0px")};
    };
  
 `;
