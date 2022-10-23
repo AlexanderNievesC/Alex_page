@@ -15,6 +15,16 @@ const StyledNav = styled.div`
   text-align: center;
   background-color: ${colors.yellow[300]};
   gap: 50px;
+
+  @media screen and (max-width: 360px){
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: ${colors.yellow[300]};
+    gap: 50px;
+    max-width:360px;
+   };
+
 `;
 
 const StyledList = styled.div`
@@ -24,16 +34,16 @@ const StyledList = styled.div`
   gap: 20px;
   align-items: center;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 360px){
      position:absolute;
      align-items:center;
      width:100%;
-     height: 40vh;
+     height: 5vh;
      justify-content:center;
-     flex-direction:column;
+     flex-direction:row;
      background-color:${colors.yellow[300]};
      top:80px;
-     left:${((open)=>open? "-500px":"0px")};
+     left:${((open)=>open? "0px":"-500px")};
    };
  
 `;
@@ -67,15 +77,25 @@ const Icon = styled.div`
   gap: 20px;
   align-items: center;
   text-decoration: none;
+
+  @media screen and (max-width: 360px){
+     
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    text-decoration: none;
+   }
 `;
 
  const MobileIcon = styled.div`
    display:none;
 
-   @media screen and (max-width: 500px){
+   @media screen and (max-width: 360px){
+     
      display:flex;
      align-items:center;
-
+     left:20px;
     &:hover{
       cursor:pointer;
     }
@@ -115,12 +135,11 @@ export default function Navbar() {
         >
           <AiFillLinkedin />
         </StyledLink>
+        <MobileIcon onclick={()=>(setShowMenu(!showMenu))} >
+        <FaBars  />
+        </MobileIcon>
       </Icon>
-
-      <MobileIcon onclick={()=>(setShowMenu(!showMenu))} >
-        <FaBars  size={20} />
-      </MobileIcon>
-
+      
     </StyledNav>
   );
 }

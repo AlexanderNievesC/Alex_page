@@ -5,6 +5,10 @@ import { useRef } from "react";
 
 const MainContainer = styled.div`
   background-color: ${colors.white};
+
+  @media screen and (max-width: 360px){
+    padding-top: 40px;
+   };
 `;
 
 const Styledh1 = styled.h1`
@@ -28,6 +32,7 @@ const StyledForm = styled.form`
   text-align: center;
   padding-top: 10px;
   padding-bottom: 30px;
+
 `;
 
 function Contact() {

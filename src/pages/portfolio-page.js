@@ -7,6 +7,10 @@ import "slick-carousel/slick/slick-theme.css";
 const MainContainer = styled.div`
   background-color: ${colors.white};
   height:60vh;
+
+  @media screen and (max-width: 360px){
+    padding-top: 50px;
+   };
 `;
 
 const Styledh1 = styled.h1`

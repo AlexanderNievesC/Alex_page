@@ -47,6 +47,13 @@ const StyleImg = styled.img`
   display: block;
   height:500px;
   border-radius: 500px;
+
+  @media screen and (max-width: 360px){
+     
+    display: block;
+    height:300px;
+    border-radius: 500px;
+    }
 `;
 
 const Home = () => {
