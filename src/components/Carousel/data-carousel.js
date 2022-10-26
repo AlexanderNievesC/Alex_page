@@ -5,7 +5,7 @@ const DataCarousel = [
     description:
       "Created with React and Ruby on rails, trying to find a job?",
     link: "https://github.com/paulnc27/Get_that_job",
-    button:"Look",
+    button:"In process...",
     imagen:"job.jpg",
   },
   {
@@ -30,7 +30,7 @@ const DataCarousel = [
     id: 4,
     title: "Pokemon App (React)",
     description: "Created with React. Choose your Pokemon now",
-    button:"Look",
+    button:"In process...",
     imagen:"pokemon.gif",
   },
 ];
