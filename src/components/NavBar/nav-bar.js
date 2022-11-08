@@ -130,7 +130,7 @@ export default function Navbar() {
           <AiFillGithub  />
         </StyledLink>
         <StyledLink
-          href="https://www.linkedin.com/in/paul-alexander-6669bb136/"
+          href="https://www.linkedin.com/in/alexander-nieves-6669bb136/"
           target="_blank"
         >
           <AiFillLinkedin />
