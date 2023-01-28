@@ -19,7 +19,7 @@ let data = [
     name: "Request data",
     figure_link:
       "https://www.svgrepo.com/show/190371/analytics-data-analytics.svg",
-    deployment: "",
+    deployment: "https://request-data.netlify.app/",
     repository: "https://github.com/AlexanderNievesC/2_AppRequestData",
     API: "https://randomuser.me/api",
   },
