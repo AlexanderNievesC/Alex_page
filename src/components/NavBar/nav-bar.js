@@ -123,9 +123,6 @@ export default function Navbar() {
       </StyledList>
 
       <Icon>
-        <StyledLink href="https://twitter.com/alexand73785230" target="_blank">
-          <BsTwitter />
-        </StyledLink>
         <StyledLink href="https://github.com/AlexanderNievesC" target="_blank">
           <AiFillGithub  />
         </StyledLink>
