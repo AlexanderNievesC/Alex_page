@@ -7,12 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 let data = [
   {
     id: 1,
-    name: "Classroom",
-    figure_link:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png?20221017163738",
-    deployment: "****",
-    repository: "https://github.com/AlexanderNievesC/1_AppClassRoom",
-    API: "****",
+    name: "Get that job",
+    figure_link: "https://cdn-icons-png.flaticon.com/512/1694/1694787.png",
+    deployment: "https://get-that-job-nieves.netlify.app/",
+    repository: "https://github.com/AlexanderNievesC/4_AppGetThatJob_FrontEnd",
+    API: "https://github.com/AlexanderNievesC/4_AppGetThatJob_BackeEnd",
   },
   {
     id: 2,
@@ -33,11 +32,11 @@ let data = [
   },
   {
     id: 4,
-    name: "Get that job",
-    figure_link: "https://cdn-icons-png.flaticon.com/512/1694/1694787.png",
+    name: "Classroom",
+    figure_link:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png?20221017163738",
     deployment: "****",
-    repository: "https://github.com/AlexanderNievesC/4_AppGetThatJob_FrontEnd",
-    API: "https://github.com/AlexanderNievesC/4_AppGetThatJob_BackeEnd",
+    repository: "https://github.com/AlexanderNievesC/1_AppClassRoom",
   },
 ];
 
