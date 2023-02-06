@@ -44,7 +44,7 @@ function Portfolio() {
   return (
     <div>
       <Title>
-        <h1>My Folder</h1>
+        <h1>My Portafolio</h1>
         <div>Take a look at some of my projects</div>
       </Title>
       <DirectionContainer>
@@ -53,18 +53,17 @@ function Portfolio() {
             <div>
               <ImageItem src={element.figure_link} alt="Image"></ImageItem>
               <h3>
-                <Link simple href={element.deployment}>
-                  {element.name}
-                </Link>
+                Deployment:
+                <Link href={element.deployment}>Click Here</Link>
               </h3>
 
-              <div>
-                Repository: <Link href={element.repository}>Click Here</Link>
-              </div>
+              <h4>
+                Front End: <Link href={element.repository}>Click Here</Link>
+              </h4>
 
-              <div>
-                API: <Link href={element.API}>Click Here</Link>
-              </div>
+              <h4>
+                Back End: <Link href={element.API}>Click Here</Link>
+              </h4>
             </div>
           );
         })}
