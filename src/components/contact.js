@@ -15,9 +15,9 @@ export default function Contact() {
           <div>This is my email <u>paulalexander.nieves@gmail.com</u></div>
           <div>Find me on:</div>
           <IconZone>
-            <a href="https://twitter.com/alexand73785231" target="_blank"><BsTwitter color="rgb(73, 175, 115)" size={20}/></a>
-            <a href="https://github.com/AlexanderNievesC" target="_blank"><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
-            <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" target="_blank"><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
+            <a href="https://twitter.com/alexand73785231" ><BsTwitter color="rgb(73, 175, 115)" size={20}/></a>
+            <a href="https://github.com/AlexanderNievesC" ><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
+            <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/"><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
           </IconZone>
         </Subtitle>
       </SubContainer>
