@@ -88,4 +88,5 @@ export const colors = {
   },
   black: "#171717",
   white: "#FFFFFF",
+  purple: "#9f574f",
 };

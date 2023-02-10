@@ -1,26 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar/nav-bar";
-import { Contact, Home, NotFound, About, Experience, Portfolio } from "./pages";
-import styled from "@emotion/styled";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import About from "./components/about";
+import AboutDetail from "./components/about-detail";
+import Contact from "./components/contact";
+import Experience from "./components/experience";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Language from "./components/languaje";
+import Portfolio from "./components/portfolio";
+import Skill from "./components/skill";
 
 function App() {
   return (
-    <Container>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </Container>
+    <div>
+      <Header/>
+      <About/>
+      <AboutDetail/>
+      <Skill/>
+      <Language/>
+      <Experience/> 
+      <Portfolio/>
+      <Contact/> 
+      <Footer/>
+    </div>
   );
 }
 
