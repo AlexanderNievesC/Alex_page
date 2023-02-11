@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
+import { Link} from 'react-scroll'
 //main function
 export default function Footer() {
   return (  
     <Container>
-        <OptionElement>About</OptionElement>
-        <OptionElement>Skills</OptionElement>
-        <OptionElement>Experience</OptionElement>
-        <OptionElement>Portfolio</OptionElement>
-        <OptionElement>Contact</OptionElement>
+       <Link to="about"> <OptionElement>About</OptionElement></Link>
+       <Link to="skills"> <OptionElement>Skills</OptionElement></Link>
+       <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
+       <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
+       <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
     </Container>
   )
 }
