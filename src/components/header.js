@@ -5,36 +5,59 @@ import { colors } from '../styles/colors';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 import { TiSocialTwitterCircular } from 'react-icons/ti';
 import { DiGithub } from 'react-icons/di';
+import { Link} from 'react-scroll'
 
+//Main Function
 export default function Header() {
   return (
-    <MainContainer>
-      {/* <StyleImg src={background} alt="background" width="100%"/> */}
+    <MainContainer id="header">
 
       <OptionBar>
-        <OptionElement>About</OptionElement>
-        <OptionElement>Skills</OptionElement>
-        <OptionElement>Experience</OptionElement>
-        <OptionElement>Portfolio</OptionElement>
-        <OptionElement>Contact</OptionElement>
+       <Link to="about"> <OptionElement>About</OptionElement></Link>
+       <Link to="skills"> <OptionElement>Skills</OptionElement></Link>
+       <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
+       <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
+       <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
       </OptionBar>
 
-    <SubArea>
-      <SectionText>
-        <Text color="white" size="80px">Alexander Nieves</Text>
-        <Text color="rgb(73, 175, 115)" size="41.4px">Full Stack Developer</Text>
-      </SectionText>
+      <SubArea>
+        <SectionText>
+          <Text color="white" size="80px">Alexander Nieves</Text>
+          <Text color="rgb(73, 175, 115)" size="41.4px">Full Stack Developer</Text>
+          <a href="cv.pdf" download={"cv.pdf"}><Button > Download my CV</Button></a>
+        </SectionText>
 
-      <SectionIcon>
-        <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></a>
-        <a href="https://twitter.com/alexand73785231" ><TiSocialTwitterCircular color="white" size={50}/></a>
-        <a href="https://github.com/AlexanderNievesC" ><DiGithub color="white" size={50}/></a>
-      </SectionIcon>
-    </SubArea>
+        <SectionIcon>
+          <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></a>
+          <a href="https://twitter.com/alexand73785231" ><TiSocialTwitterCircular color="white" size={50}/></a>
+          <a href="https://github.com/AlexanderNievesC" ><DiGithub color="white" size={50}/></a>
+        </SectionIcon>
+      </SubArea>
+  <br/><br/>
+  <br/>
+  <br/>
+  <br/><br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/><br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/><br/>
+
     </MainContainer>
   )
 }
-
+//Styled components
 const MainContainer=styled.div`
   background-image:url(${background});
   background-size:cover;  
@@ -48,8 +71,7 @@ const OptionBar=styled.div`
   justify-content: right;
   padding-top:20px;
   padding-right:20px;
-`;
-
+`
 const OptionElement=styled.div`
   cursor:pointer;
 
@@ -57,20 +79,24 @@ const OptionElement=styled.div`
     color:${colors.gray[400]};
   }
 `
-
 const Text=styled.div`
   ${({color, size})=>SetProperties(color, size)};
   font-family: 'Roboto Slab', serif;
   font-weight:700;
   justify-content: center;
   text-shadow: 1px 1px 1px #000;
+
+  @media screen and (max-width: 500px){   
+  font-size:30px;
+  line-height : 20px;
+  align-content:center;
+  }
 `
 const SubArea=styled.div`
   padding-top:100px;
   display:flex;
   flex-direction:row;
 `
-
 const SectionText=styled.div`
   display:flex;
   flex-direction:column;
@@ -79,7 +105,6 @@ const SectionText=styled.div`
   gap:50px;
   width:95%;
 `
-
 const SectionIcon=styled.div`
   right:20px;
   top:300px;
@@ -88,7 +113,16 @@ const SectionIcon=styled.div`
   align-items:flex-end;
   gap:10px;
 `
-
+const Button=styled.button`
+  border: none;
+  border-radius: 50px;
+  background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
+  width: 200px;
+  height:40px;
+  color:${colors.white};
+  text-shadow: 1px 1px 1px #000;
+  cursor:pointer;
+` 
 //Functions to support styled components
 
 const SetProperties=(color, size)=>{

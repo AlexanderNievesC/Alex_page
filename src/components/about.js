@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import foto from '../assets/foto.jpg';
 import { colors } from '../styles/colors';
 
-
+//main function
 export default function About() {
   return (
-    <Container>
+    <Container id="about">
       <div>
         <Title>I code ...</Title>
         <br/>
@@ -26,7 +26,7 @@ export default function About() {
     </Container>
   )
 }
-
+//styled components
 const Container =styled.div`
   display:flex;
   height:432px;
@@ -46,6 +46,7 @@ const Title=styled.div`
   font-size: 40px;
   padding-bottom:20px;
   text-align:left;
+  text-shadow: 1px 1px 1px #000;
 `
 const Paragraph=styled.div`
   color: rgb(66, 84, 117);
@@ -56,18 +57,17 @@ const Paragraph=styled.div`
   width:300px;
   text-align:justify;
 `
-
 const StyledImg=styled.img`
   display:flex;
   justify-content:center;
   border-radius:50%;
 `
-
 const TitleSecond=styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 31.52px;
   padding-bottom:30px;
+  
 `
 const Year=styled.div`
   color: rgb(73, 175, 115);
@@ -77,8 +77,8 @@ const Year=styled.div`
   font-size: 17.76px;
   line-height: 1.4;
   padding-bottom:20px;
+  
 `
-
 const SecondPart=styled.div`
   display:flex;
   flex-direction:column;

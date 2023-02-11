@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { colors } from '../styles/colors';
 import { BsTwitter,BsGithub,BsLinkedin } from 'react-icons/bs';
 
-
+//main function
 export default function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <SubContainer>
         <Title>Contact me</Title>
         <Subtitle>
@@ -33,6 +33,7 @@ export default function Contact() {
   )
 }
 
+//styled components
 const Container=styled.div`
   display:flex;
   flex-direction:row;
@@ -41,7 +42,6 @@ const Container=styled.div`
   background-color:${colors.gray[100]};
   padding:60px;
 `
-
 const SubContainer=styled.div`
   display:flex;
   flex-direction:column;
@@ -51,14 +51,12 @@ const StyledForm=styled.div`
   flex-direction:column;
   gap:20px;
 `
-
 const Title=styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 31.52px;
   padding-bottom:20px;
 `
-
 const Subtitle=styled.div`
   font-family: Lato;
   font-weight: 400;
@@ -70,7 +68,6 @@ const IconZone= styled.div`
   flex-direction:row;
   gap:20px;
 `
-
 const InputStyled=styled.input`
   display:flex;
   padding:20px;
@@ -80,12 +77,12 @@ const InputStyled=styled.input`
   border:0.1px solid gray;
   font-size:14px;
 `
-
 const Button=styled.button`
   border: none;
   border-radius: 50px;
   background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
   max-width: 100px;
   height:40px;
-  color:${colors.white}
+  color:${colors.white};
+  text-shadow: 1px 1px 1px #000;
 ` 

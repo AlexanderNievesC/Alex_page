@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
-
+//main function
 export default function Footer() {
   return (  
     <Container>
@@ -13,6 +13,7 @@ export default function Footer() {
     </Container>
   )
 }
+//styled components
 const Container=styled.div`
   display:flex;
   flex-direction:row;
