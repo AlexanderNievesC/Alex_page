@@ -45,7 +45,7 @@ const Container=styled.div`
   flex-direction:row;
   gap:200px;
   height:350px;
-  background-color:${colors.gray[100]};
+  background-color:${colors.gray[300]};
   padding:90px;
 `
 const FirstPart=styled.div`

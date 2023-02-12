@@ -25,7 +25,7 @@ export default function Contact() {
         <StyledForm>
           <InputStyled type="text" placeholder="Name" main></InputStyled>
           <InputStyled type="text" placeholder="Email" main></InputStyled>
-          <InputStyled type="text" ></InputStyled>
+          <InputStyled type="text" placeholder="Leave a message here"></InputStyled>
           <Button>Send</Button>
         </StyledForm>
       </SubContainer>
@@ -39,7 +39,7 @@ const Container=styled.div`
   flex-direction:row;
   justify-content:space-between;
   height:420px;
-  background-color:${colors.gray[100]};
+  background-color:${colors.gray[300]};
   padding:60px;
 `
 const SubContainer=styled.div`
@@ -70,6 +70,9 @@ const IconZone= styled.div`
 `
 const InputStyled=styled.input`
   display:flex;
+  flex-direction:column;
+  text-align:left;
+  justify-content:flex-end;
   padding:20px;
   border-radius:${props=>props.main? "50px":"25px"};
   height:${props=>props.main? "47px":"120px"};

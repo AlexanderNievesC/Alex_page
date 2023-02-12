@@ -34,7 +34,7 @@ const Container =styled.div`
   align-items:center;
   align-content: center;
   justify-content:center;
-  background-color:${colors.gray[100]};
+  background-color:${colors.gray[300]};
   gap:200px;
   text-align:center;
 

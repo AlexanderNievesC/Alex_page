@@ -33,27 +33,6 @@ export default function Header() {
           <a href="https://github.com/AlexanderNievesC" ><DiGithub color="white" size={50}/></a>
         </SectionIcon>
       </SubArea>
-  <br/><br/>
-  <br/>
-  <br/>
-  <br/><br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/><br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/><br/>
-
     </MainContainer>
   )
 }

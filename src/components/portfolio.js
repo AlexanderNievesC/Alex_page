@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components';
 import job from '../assets/job.png';
 import { colors } from '../styles/colors'
+import { SlMagnifier as Lupa } from 'react-icons/sl';
+
 //main function
 export default function Portfolio() {
   return (
-    <Container id="portfolio">
-      <Title>Portfolio</Title>
-      <JobDiv></JobDiv>
-      <Button>See Here</Button>
+    <Container>
+      <JobDiv><Button><a href="https://get-that-job-nieves.netlify.app/"><Lupa color="white"/></a></Button></JobDiv>
     </Container>
   )
 }
@@ -26,28 +26,27 @@ const Container=styled.div`
   justify-content:center;
   text-align:center;
   align-items:center;
-  padding:20px;
-  gap:10px;
-  height:500px;
+  height:800px;
   background-color:${colors.black};
 `
 const JobDiv=styled.div`
   display:flex;
   flex-direction:column;
   background-image:url(${job});
-  width:290px;
-  height:400px;
-  justify-content:flex-end;
-  align-items:center;
+  width:480px;
+  height:85%;
   background-size:cover;
-  border-radius:0px;
+  justify-content:flex-end;
+  padding:20px;
 `
 const Button=styled.button`
   border: none;
   border-radius: 50px;
   background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
-  width: 100px;
+  width: 37px;
   height:40px;
   color:${colors.white};
-  text-shadow: 1px 1px 1px #000;
+  box-shadow: 3px 3px 3px black;
+  right:38%;
+  cursor:pointer;
 ` 
