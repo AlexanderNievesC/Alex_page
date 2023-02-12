@@ -38,22 +38,22 @@ export default function Experience() {
         <img src={guy} alt="guy" height="300px" width="450px"></img>
         <Text1>
           <First><b>Education</b></First>
-          <div>2022 <br/> Full Stack Developer <br/>Codeable</div>
+          <SimpleText>2022 <br/> Full Stack Developer <br/>Codeable</SimpleText>
           <br/>
-          <div>2020-2022 <br/> Data Architect <br/>Cibertec</div>
+          <SimpleText>2020-2022 <br/> Data Architect <br/>Cibertec</SimpleText>
           <br/>
-          <div>2011-2015 <br/> Mining Engineer <br/>UNSA</div>
+          <SimpleText>2011-2015 <br/> Mining Engineer <br/>UNSA</SimpleText>
         </Text1>
       </SubContainer>
 
       <SubContainer>
         <Text2>
           <First><b>Work Experience</b></First>
-            <div>2017-2018 <br/> Mining Assistant <br/>GORE</div>
+            <SimpleText>2017-2018 <br/> Mining Assistant <br/>GORE</SimpleText>
             <br/>
-            <div>2019 <br/> Mining Intern <br/>SIMSA/PAN AMERICAN</div>
+            <SimpleText>2019 <br/> Mining Intern <br/>SIMSA/PAN AMERICAN</SimpleText>
             <br/>
-            <div>2021-2022 <br/> Environmental Supervisor <br/>OEFA/BUREAU VERITAS</div>
+            <SimpleText>2021-2022 <br/> Environmental Supervisor <br/>OEFA/BUREAU VERITAS</SimpleText>
           </Text2>
           <img src={imaginery} alt="guy" height="300px"></img>
       </SubContainer>
@@ -107,4 +107,10 @@ const Text2=styled.div`
   width:450px;
   text-align:right;
   padding-right:30px;
+`
+const SimpleText=styled.div`
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 15px;
+
 `
