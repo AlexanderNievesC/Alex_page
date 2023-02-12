@@ -29,14 +29,26 @@ export default function About() {
 //styled components
 const Container =styled.div`
   display:flex;
+  flex-direction:row;
   height:432px;
   padding:20px;
   align-items:center;
   align-content: center;
+  gap:40px;
   justify-content:center;
-  background-color:${colors.gray[300]};
-  gap:200px;
   text-align:center;
+  background-color:${colors.gray[300]};
+  
+
+
+  @media screen and (max-width: 596px){   
+    gap:20px;
+  }
+
+  @media screen and (max-width: 360px){
+    flex-wrap:wrap;
+    height:800px;
+  }
 
 `
 const Title=styled.div`
@@ -54,8 +66,13 @@ const Paragraph=styled.div`
   font-weight: 400;
   font-size: 17.76px;
   line-height: 1.4;
-  width:300px;
   text-align:justify;
+  max-width:450px;
+
+  @media screen and (max-width: 360px){
+    
+  }
+
 `
 const StyledImg=styled.img`
   display:flex;

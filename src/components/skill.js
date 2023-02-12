@@ -21,14 +21,9 @@ export default function Skill() {
           </Item>
 
           <Item>
-            <Title>JS</Title>
-            <div>JS/React</div>  
+            <Title>Web</Title>
+            <div>JS(React) /HTML /CSS</div>  
           </Item>
-
-          <Item>
-            <Title>HTML</Title>
-            <div>Html/Css</div>  
-          </Item> 
 
           <Item>
             <Title>DB</Title>
@@ -43,10 +38,22 @@ export default function Skill() {
 const Container=styled.div`
   display:flex;
   flex-direction:row;
-  gap:200px;
   height:350px;
   background-color:${colors.gray[300]};
-  padding:90px;
+  padding:40px;
+  justify-content:center;
+  align-items:center;
+
+  @media screen and (max-width: 596px){   
+    padding:30px;
+    gap:10px;
+  }
+
+  @media screen and (max-width: 360px){
+    height:700px;
+    flex-wrap:wrap;
+  }
+
 `
 const FirstPart=styled.div`
   display:flex;
@@ -58,6 +65,11 @@ const TitleFirst=styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 41.4px;
+  line-height:40px;
+
+  @media screen and (max-width: 596px){   
+    font-size: 30px;
+  }
   
 `
 const TextFirst=styled.div`
@@ -67,8 +79,8 @@ const TextFirst=styled.div`
   text-align:justify;
 `
 const SeconPart=styled.div`
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
+  display:flex;
+  flex-direction:column;
   gap:30px;
   text-align:center;
   padding:30px;
@@ -85,4 +97,9 @@ const Title=styled.div`
   font-weight: 700;
   font-size: 53.28px;
   text-shadow: 1px 1px 1px #000;
+
+  @media screen and (max-width: 360px){
+    font-size: 40px;
+  }
+
 `

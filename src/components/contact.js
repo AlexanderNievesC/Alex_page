@@ -16,8 +16,8 @@ export default function Contact() {
           <div>Find me on:</div>
           <IconZone>
             <a href="https://twitter.com/alexand73785231" ><BsTwitter color="rgb(73, 175, 115)" size={20}/></a>
-            <a href="https://github.com/AlexanderNievesC" ><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
-            <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/"><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
+            <a href="https://github.com/AlexanderNievesC"  ><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
+            <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
           </IconZone>
         </Subtitle>
       </SubContainer>
@@ -40,11 +40,22 @@ const Container=styled.div`
   justify-content:space-between;
   height:420px;
   background-color:${colors.gray[300]};
-  padding:60px;
+  padding:30px;
+  align-items:center;
+
+  @media screen and (max-width: 596px){   
+    padding:30px;
+  }
+
+  @media screen and (max-width: 360px){   
+    flex-wrap:wrap;
+    height:700px;
+  }
 `
 const SubContainer=styled.div`
   display:flex;
   flex-direction:column;
+
 `
 const StyledForm=styled.div`
   display:flex;
@@ -79,6 +90,11 @@ const InputStyled=styled.input`
   width:320px;
   border:0.1px solid gray;
   font-size:14px;
+
+  @media screen and (max-width: 596px){   
+    width:250px;
+    padding:20px;
+  }
 `
 const Button=styled.button`
   border: none;

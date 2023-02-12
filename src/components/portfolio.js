@@ -13,13 +13,6 @@ export default function Portfolio() {
   )
 }
 //styled components
-const Title =styled.div`
-  font-family: "Roboto Slab";
-  font-weight: 700;
-  font-size: 41.4px;
-  color:${colors.white};
-  padding-bottom:20px;
-`
 const Container=styled.div`
   display:flex;
   flex-direction:column;
@@ -28,6 +21,10 @@ const Container=styled.div`
   align-items:center;
   height:800px;
   background-color:${colors.black};
+
+  @media screen and (max-width: 360px){   
+    height:400px;
+  }
 `
 const JobDiv=styled.div`
   display:flex;
@@ -38,6 +35,11 @@ const JobDiv=styled.div`
   background-size:cover;
   justify-content:flex-end;
   padding:20px;
+
+  @media screen and (max-width: 360px){   
+    width:90%;
+    height:350px;
+  }
 `
 const Button=styled.button`
   border: none;

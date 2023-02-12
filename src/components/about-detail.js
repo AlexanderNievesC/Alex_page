@@ -63,6 +63,16 @@ const Container=styled.div`
   text-align:center;
   justify-content:center;
   padding:20px;
+
+
+  @media screen and (max-width: 596px){   
+    gap:40px;
+  }
+
+  @media screen and (max-width: 360px){   
+    height:800px;
+    flex-wrap:wrap;
+  }
 `
 const ContElement=styled.div`
   display:flex;

@@ -35,7 +35,7 @@ export default function Experience() {
     <Container id="experience">
       <Title>Experience</Title>
       <SubContainer>
-        <img src={guy} alt="guy" height="300px" width="450px"></img>
+        <Image src={guy} alt="guy" height="290px" width="450px"></Image>
         <Text1>
           <First><b>Education</b></First>
           <SimpleText>2022 <br/> Full Stack Developer <br/>Codeable</SimpleText>
@@ -51,11 +51,11 @@ export default function Experience() {
           <First><b>Work Experience</b></First>
             <SimpleText>2017-2018 <br/> Mining Assistant <br/>GORE</SimpleText>
             <br/>
-            <SimpleText>2019 <br/> Mining Intern <br/>SIMSA/PAN AMERICAN</SimpleText>
+            <SimpleText>2019 <br/> Mining Intern <br/>PAN AMERICAN</SimpleText>
             <br/>
-            <SimpleText>2021-2022 <br/> Environmental Supervisor <br/>OEFA/BUREAU VERITAS</SimpleText>
+            <SimpleText>2021-2022 <br/> Supervisor <br/>OEFA</SimpleText>
           </Text2>
-          <img src={imaginery} alt="guy" height="300px"></img>
+          <Image src={imaginery} alt="guy" height="290px" width="450px"></Image>
       </SubContainer>
       <Title id="portfolio">My Portfolio</Title>
     </Container>
@@ -67,32 +67,60 @@ const Title =styled.div`
   font-weight: 700;
   font-size: 41.4px;
   color:${colors.black};
-  padding-bottom:20px;
-  padding-top:20px;
+  padding-bottom:50px;
+  padding-top:40px;
 `
 const Container=styled.div`
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  height:1000px;
+  height:850px;
   background-color:${colors.gray[300]};
-  padding-top:40px;
-  padding-bottom:10px;
+  padding-top:10px;
   text-align:center;
+
+  @media screen and (max-width: 596px){   
+    padding:10px;
+  }
+
+  @media screen and (max-width: 360px){   
+    height:1250px;
+  }
 `
 const SubContainer=styled.div`
   display:flex;
   flex-direction:row;
   justify-content:center;
-  padding:20px 90px 10px 90px;
+  padding:10px;
+  align-items:center;
+
+  @media screen and (max-width: 596px){   
+    padding:10px;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+  }
+
+  @media screen and (max-width: 360px){
+    flex-wrap:wrap;
+  }
 `
 const Text1=styled.div`
   display:flex;
   flex-direction:column;
   height:300px;
-  width:450px;
+  width:400px;
   text-align:left;
-  padding-left:30px;
+  padding-left:40px;
+
+  @media screen and (max-width: 596px){   
+    width:100%;
+  }
+
+  @media screen and (max-width: 360px){   
+    padding-left:0px;
+    padding-top:10px;
+    text-align:center;
+  }
 `
 const First=styled.div`
   font-family: Lato;
@@ -106,11 +134,27 @@ const Text2=styled.div`
   height:300px;
   width:450px;
   text-align:right;
-  padding-right:30px;
+  padding-right:40px;
+
+  @media screen and (max-width: 360px){   
+    padding-right:0px;
+    padding-bottom:20px;
+    text-align:center;
+  }
 `
 const SimpleText=styled.div`
+  color: rgb(66, 84, 117);
   font-family: Lato;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
+`
+const Image=styled.img`
+    @media screen and (max-width: 596px){   
+    height:250px;
+    width:330px;
+  }
 
+  @media screen and (max-width: 360px){   
+    height:180px;
+  }
 `
