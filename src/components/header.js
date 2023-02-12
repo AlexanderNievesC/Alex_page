@@ -29,7 +29,6 @@ export default function Header() {
 
         <SectionIcon>
           <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></a>
-          <a href="https://twitter.com/alexand73785231" ><TiSocialTwitterCircular color="white" size={50}/></a>
           <a href="https://github.com/AlexanderNievesC" ><DiGithub color="white" size={50}/></a>
         </SectionIcon>
       </SubArea>
