@@ -23,7 +23,7 @@ const Container=styled.div`
   background-color:${colors.black};
 
   @media screen and (max-width: 360px){   
-    height:400px;
+    height:420px;
   }
 `
 const JobDiv=styled.div`
@@ -38,7 +38,7 @@ const JobDiv=styled.div`
 
   @media screen and (max-width: 360px){   
     width:90%;
-    height:350px;
+    height:400px;
   }
 `
 const Button=styled.button`

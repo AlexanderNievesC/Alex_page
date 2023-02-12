@@ -19,7 +19,6 @@ export default function Header() {
        <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
        <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
        <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
-      <FaBars/> 
       </OptionBar>
 
       <SubArea>
@@ -58,7 +57,7 @@ const OptionBar=styled.div`
   align-items:center;
 
   @media screen and (max-width: 360px){
-
+    gap:10px;
   }
 `
 
@@ -67,6 +66,11 @@ const OptionElement=styled.div`
 
   &:hover {
     color:${colors.gray[400]};
+  }
+
+  @media screen and (max-width: 360px){
+    gap:10px;
+    font-size:15px;
   }
 `
 const Text=styled.div`

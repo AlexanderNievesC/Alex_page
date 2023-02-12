@@ -25,6 +25,10 @@ const Container=styled.div`
   align-items:center;
   background-color:${colors.black};
   height:100px;
+
+  @media screen and (max-width: 360px){
+    gap:10px;
+  }
 `
 const OptionElement=styled.div`
 
@@ -33,5 +37,10 @@ const OptionElement=styled.div`
 
   &:hover {
     color:${colors.gray[400]};
+  }
+
+  @media screen and (max-width: 360px){
+    gap:10px;
+    font-size:15px;
   }
 `
