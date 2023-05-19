@@ -1,10 +1,27 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
 import { BsTwitter,BsGithub,BsLinkedin } from 'react-icons/bs';
+import emailjs from '@emailjs/browser';
+
 
 //main function
 export default function Contact() {
+  const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_3js3pb8', 'template_cfkwdiv', form.current, 'Q4JQEMp0i6mWZfQ7h')
+        .then((result) => {
+            console.log(result.text);
+            console.log("message sent")
+        }, (error) => {
+            console.log(error.text);
+        });
+
+    };
+
   return (
     <Container id="contact">
       <SubContainer>
@@ -15,17 +32,16 @@ export default function Contact() {
           <div>This is my email <u>paulalexander.nieves@gmail.com</u></div>
           <div>Find me on:</div>
           <IconZone>
-            <a href="https://twitter.com/alexand73785231" ><BsTwitter color="rgb(73, 175, 115)" size={20}/></a>
             <a href="https://github.com/AlexanderNievesC"  ><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
             <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
           </IconZone>
         </Subtitle>
       </SubContainer>
       <SubContainer>
-        <StyledForm>
-          <InputStyled type="text" placeholder="Name" main></InputStyled>
-          <InputStyled type="text" placeholder="Email" main></InputStyled>
-          <InputStyled type="text" placeholder="Leave a message here"></InputStyled>
+        <StyledForm ref={form} onSubmit={sendEmail}>
+          <InputStyled type="text" placeholder="user_name" main></InputStyled>
+          <InputStyled type="text" placeholder="user_email" main></InputStyled>
+          <InputStyled type="text" placeholder="message"></InputStyled>
           <Button>Send</Button>
         </StyledForm>
       </SubContainer>
@@ -57,7 +73,7 @@ const SubContainer=styled.div`
   flex-direction:column;
 
 `
-const StyledForm=styled.div`
+const StyledForm=styled.form`
   display:flex;
   flex-direction:column;
   gap:20px;
