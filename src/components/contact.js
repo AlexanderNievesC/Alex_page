@@ -39,9 +39,9 @@ export default function Contact() {
       </SubContainer>
       <SubContainer>
         <StyledForm ref={form} onSubmit={sendEmail}>
-          <InputStyled type="text" placeholder="user_name" main></InputStyled>
-          <InputStyled type="text" placeholder="user_email" main></InputStyled>
-          <InputStyled type="text" placeholder="message"></InputStyled>
+          <InputStyled type="text" name="user_name" placeholder="Name" main></InputStyled>
+          <InputStyled type="text" name="user_email"  placeholder="Email" main></InputStyled>
+          <InputStyled type="text" name="message" placeholder="Leave a message here"></InputStyled>
           <Button>Send</Button>
         </StyledForm>
       </SubContainer>
