@@ -1,17 +1,36 @@
 import React from 'react'
 import styled from 'styled-components';
 import job from '../assets/job.png';
-import Keepable from '../assets/keepable.jpg';
+import keepableimg from '../assets/keepable.jpg';
+import Contactabl from '../assets/Contactable.jpg';
+import Doable from '../assets/Doable.jpg';
+import Organizable from '../assets/Organizable.png';
 import { colors } from '../styles/colors'
 import { SlMagnifier as Lupa } from 'react-icons/sl';
+import Carousel from 'react-elastic-carousel';
+
+
+const breakPoints=[
+  {width:1,itemToShow:1},
+  {width:550,itemToShow:2},
+  {width:768,itemToShow:3},
+  {width:1200,itemToShow:4},
+]
 
 //main function
 export default function Portfolio() {
   return (
-    <Container>
-      <JobDiv><Button><a href="https://get-that-job-nieves.netlify.app/"><Lupa color="white"/></a></Button></JobDiv>
-      <Keepabl><Button><a href="https://keepable-alex.netlify.app/"><Lupa color="white"/></a></Button></Keepabl>
+    <>
+    <Container >
+      <Carousel>
+        <JobDiv><Button><a href="https://get-that-job-nieves.netlify.app/"><Lupa color="white"/></a></Button></JobDiv>
+        <Keepabl><Button><a href="https://keepable-alex.netlify.app/"><Lupa color="white"/></a></Button></Keepabl>
+        <Contactable><Button><a href="/"><Lupa color="white"/></a></Button></Contactable>
+        <Doabl><Button><a href="/"><Lupa color="white"/></a></Button></Doabl>
+        <Organizabl><Button><a href="/"><Lupa color="white"/></a></Button></Organizabl>
+      </Carousel> 
     </Container>
+    </>
   )
 }
 //styled components
@@ -19,10 +38,11 @@ const Container=styled.div`
   display:flex;
   flex-direction:row;
   gap:10px;
-  justify-content:center;
-  text-align:center;
   align-items:center;
-  height:800px;
+  text-align:center;
+  height:700px;
+  justify-content:center;
+  
   background-color:${colors.black};
 
   @media screen and (max-width: 360px){
@@ -36,8 +56,8 @@ const JobDiv=styled.div`
   display:flex;
   flex-direction:column;
   background-image:url(${job});
-  width:480px;
-  height:85%;
+  width:350px;
+  height:500px;
   background-size:cover;
   justify-content:flex-end;
   padding:20px;
@@ -51,9 +71,9 @@ const JobDiv=styled.div`
 const Keepabl=styled.div`
   display:flex;
   flex-direction:column;
-  background-image:url(${Keepable});
-  width:840px;
-  height:70%;
+  background-image:url(${keepableimg});
+  width:700px;
+  height:450px;
   background-size:cover;
   justify-content:flex-end;
   padding:20px;
@@ -64,6 +84,52 @@ const Keepabl=styled.div`
   }
 `
 
+const Doabl=styled.div`
+  display:flex;
+  flex-direction:column;
+  background-image:url(${Doable});
+  width:310px;
+  height:550px;
+  background-size:cover;
+  justify-content:flex-end;
+  padding:20px;
+
+  @media screen and (max-width: 360px){   
+    width:90%;
+    height:400px;
+  }
+`
+const Organizabl=styled.div`
+  display:flex;
+  flex-direction:column;
+  background-image:url(${Organizable});
+  width:800px;
+  height:500px;
+  background-size:cover;
+  justify-content:flex-end;
+  padding:20px;
+
+  @media screen and (max-width: 360px){   
+    width:90%;
+    height:400px;
+  }
+`
+
+const Contactable=styled.div`
+  display:flex;
+  flex-direction:column;
+  background-image:url(${Contactabl});
+  width:300px;
+  height:550px;
+  background-size:cover;
+  justify-content:flex-end;
+  padding:20px;
+
+  @media screen and (max-width: 360px){   
+    width:90%;
+    height:400px;
+  }
+`
 
 const Button=styled.button`
   border: none;
