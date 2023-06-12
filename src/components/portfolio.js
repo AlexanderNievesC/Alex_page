@@ -39,7 +39,7 @@ export default function Portfolio() {
                   link2={"https://github.com/AlexanderNievesC/keepable"} />
     </Keepabl>
     <Contactable>
-      <ButtonZone link1={"/"}
+      <ButtonZone link1={"https://contactable.netlify.app/"}
                   link2={"https://github.com/AlexanderNievesC/contactable"} />
     </Contactable>
     <Doabl>
