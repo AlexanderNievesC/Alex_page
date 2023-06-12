@@ -14,8 +14,8 @@ export default function Portfolio() {
 
   return (
    <Container> 
-           <JobDiv><Button><a href="https:  get-that-job-nieves.netlify.app/"><Lupa color="white"/></a></Button></JobDiv>
-           <Keepabl><Button><a href="https: keepable-alex.netlify.app/"><Lupa color="white"/></a></Button></Keepabl>
+           <JobDiv><Button><a href="https://get-that-job-nieves.netlify.app/"><Lupa color="white"/></a></Button></JobDiv>
+           <Keepabl><Button><a href="https://keepable-alex.netlify.app/"><Lupa color="white"/></a></Button></Keepabl>
            <Contactable><Button><a href="/"><Lupa color="white"/></a></Button></Contactable>
            <Doabl><Button><a href="/"><Lupa color="white"/></a></Button></Doabl>
            <Organizabl><Button><a href="/"><Lupa color="white"/></a></Button></Organizabl>
