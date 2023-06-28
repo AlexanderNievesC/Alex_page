@@ -23,6 +23,7 @@ const data=[
   school:"SIMSA/PAN AMERICAN",
   title:"Mining Intern (2019)",
   },
+  
   {
   key:4,
   school:"CIBERTEC/CODEABLE",
@@ -54,9 +55,14 @@ export default function Experience() {
             <SimpleText>2019 <br/> Mining Intern <br/>PAN AMERICAN</SimpleText>
             <br/>
             <SimpleText>2021-2022 <br/> Supervisor <br/>OEFA</SimpleText>
+            <br/>
+            <SimpleText>2023 <br/> Application Analyst <br/>MS4M</SimpleText>
           </Text2>
           <Image src={imaginery} alt="guy" height="290px" width="450px"></Image>
       </SubContainer>
+      <br></br>
+      <br></br>
+      <br></br>
       <Title id="portfolio">My Portfolio</Title>
     </Container>
   )
@@ -73,7 +79,7 @@ const Title =styled.div`
 const Container=styled.div`
   display:flex;
   flex-direction:column;
-  height:850px;
+  height:950px;
   background-color:${colors.gray[300]};
   padding-top:10px;
   text-align:center;
