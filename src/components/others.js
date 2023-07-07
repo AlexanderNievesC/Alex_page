@@ -1,0 +1,151 @@
+import styled from 'styled-components';
+import { colors } from '../styles/colors'
+import { SlMagnifier as Lupa } from 'react-icons/sl';
+import { AiFillGithub as GithubSymbol } from 'react-icons/ai';
+import tesis from '../assets/Tesis.JPG';
+import mapa from '../assets/mapa.JPG';
+import autocad from '../assets/autocad.JPG';
+import notion from '../assets/notion.jpg';
+
+const ButtonZone= (props)=>{
+    return (
+      <Main>
+        <Button><a href={props.link1}><Lupa color="white" size="20px"/></a></Button>
+      </Main>
+    );
+  }
+
+export default function Other() {
+    return (
+        <Container>
+            <Title>Other projects</Title>
+            <div>Take a look at some of my other projects and my blog </div>
+            <Images>
+                <JobDiv>
+                    <ButtonZone link1={"https://repositorio.unsa.edu.pe/server/api/core/bitstreams/4371974a-4a22-49dc-a13a-33a0c20e1ad0/content"}/>    
+                </JobDiv>
+
+                <MapDiv>
+                    <ButtonZone link1={"https://drive.google.com/file/d/1Looeup_RLgphItvvaEBdnqEqV_0-FhtY/view?usp=sharing"}/>    
+                </MapDiv>
+
+                <Autocad>
+                    <ButtonZone link1={"https://drive.google.com/file/d/160_ikr2j_f8X0Ts4ME79EDiQHW0rhcb5/view?usp=sharing"}/>    
+                </Autocad>
+
+                <Notion>
+                    <ButtonZone link1={"https://spiky-pineapple-e55.notion.site/My-blog-5ef94c56f3d4464a8844465a7f265cee?pvs=4"}/>    
+                </Notion>                     
+            </Images>
+        </Container>
+    )
+}
+
+const Container=styled.div`
+    height:100%;
+    padding:30px;
+`
+
+const Title=styled.div`
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 31.52px;
+  padding-bottom:20px;
+`
+const Images=styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+    gap:50px;
+    padding: 30px;
+    align-items:center;
+    align-self:center;
+    align-content:center;
+`
+const Main=styled.div`
+display:flex;
+flex-direction:row;
+gap:10px;
+width:150px;
+height:50px;
+`
+
+const Button=styled.button`
+border: none;
+border-radius: 50px;
+background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
+width: 37px;
+height:40px;
+color:white;
+box-shadow: 3px 3px 3px black;
+right:38%;
+cursor:pointer;
+` 
+const JobDiv=styled.div`
+display:flex;
+flex-direction:column;
+background-image:url(${tesis});
+width:350px;
+height:500px;
+background-size:cover;
+justify-content:flex-end;
+padding:20px;
+box-shadow: 3px 3px 3px black;
+
+@media screen and (max-width: 360px){   
+  width:90%;
+  height:400px;
+}
+`
+
+const MapDiv=styled.div`
+display:flex;
+flex-direction:column;
+background-image:url(${mapa});
+width:700px;
+height:500px;
+background-size:cover;
+justify-content:flex-end;
+padding:20px;
+box-shadow: 3px 3px 3px black;
+
+@media screen and (max-width: 360px){   
+  width:90%;
+  height:400px;
+}
+`
+
+const Autocad =styled.div`
+display:flex;
+flex-direction:column;
+background-image:url(${autocad});
+width:700px;
+height:500px;
+background-size:cover;
+justify-content:flex-end;
+padding:20px;
+box-shadow: 3px 3px 3px black;
+
+@media screen and (max-width: 360px){   
+  width:90%;
+  height:400px;
+}
+`
+
+const Notion =styled.div`
+display:flex;
+flex-direction:column;
+background-image:url(${notion});
+width:900px;
+height:500px;
+background-size:cover;
+justify-content:flex-end;
+padding:20px;
+box-shadow: 3px 3px 3px black;
+
+@media screen and (max-width: 360px){   
+  width:90%;
+  height:400px;
+}
+`
