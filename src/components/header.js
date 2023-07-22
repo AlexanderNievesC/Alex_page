@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import background from '../assets/programming.jpg';
+import coding from '../assets/coding.gif';
 import { colors } from '../styles/colors';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
 import { TiSocialTwitterCircular } from 'react-icons/ti';
@@ -24,8 +25,8 @@ export default function Header() {
 
       <SubArea>
         <SectionText>
-          <Text color="white" size="60px">Alexander Nieves</Text>
-          <Text color="rgb(73, 175, 115)" size="41.4px">Full Stack Developer</Text>
+          <Text primary>Alexander Nieves</Text>
+          <Text size="41.4px">Full Stack Developer</Text>
           <a href="cv.pdf" download={"cv.pdf"}><Button > Download my CV</Button></a>
         </SectionText>
 
@@ -39,7 +40,7 @@ export default function Header() {
 }
 //Styled components
 const MainContainer=styled.div`
-  background-image:url(${background});
+  background-image:url(${coding});
   background-size:cover;  
   height:500px;
 
@@ -75,11 +76,11 @@ const OptionElement=styled.div`
   }
 `
 const Text=styled.div`
-  ${({color, size})=>SetProperties(color, size)};
   font-family: 'Roboto Slab', serif;
-  font-weight:700;
+  font-size: ${props => props.primary ? "60px" : "41.4px"};
   justify-content: center;
   text-shadow: 1px 1px 1px #000;
+  color:${props => props.primary ? "white" : "rgb(73, 175, 115)"};;
 
   @media screen and (max-width: 596px){   
     font-size:50px;
@@ -88,6 +89,10 @@ const Text=styled.div`
   @media screen and (max-width: 360px){
     flex-wrap:wrap;   
     font-size:30px;
+  }
+
+  &:hover{
+    font-size: ${props => props.primary ? "4rem" : ""};
   }
 `
 const SubArea=styled.div`
@@ -107,6 +112,7 @@ const SectionText=styled.div`
   @media screen and (max-width: 596px){   
     gap:20px;
   }
+
 `
 const SectionIcon=styled.div`
   right:20px;
