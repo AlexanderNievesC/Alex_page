@@ -31,8 +31,8 @@ export default function Header() {
         </SectionText>
 
         <SectionIcon>
-          <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></a>
-          <a href="https://github.com/AlexanderNievesC"><DiGithub color="white" size={50}/></a>
+          <Links href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></Links>
+          <Links href="https://github.com/AlexanderNievesC"><DiGithub color="white" size={50}/></Links>
         </SectionIcon>
       </SubArea>
     </MainContainer>
@@ -92,7 +92,7 @@ const Text=styled.div`
   }
 
   &:hover{
-    font-size: ${props => props.primary ? "4rem" : ""};
+    font-size: ${props => props.primary ? "4rem" : "3rem"};
   }
 `
 const SubArea=styled.div`
@@ -121,7 +121,15 @@ const SectionIcon=styled.div`
   flex-direction:column;
   align-items:flex-end;
   gap:10px;
+  
 `
+
+const Links =styled.a`
+  &:hover{
+    animation: rotate360 5s linear infinite;
+  }
+`
+
 const Button=styled.button`
   border: none;
   border-radius: 50px;
@@ -131,12 +139,9 @@ const Button=styled.button`
   color:${colors.white};
   text-shadow: 1px 1px 1px #000;
   cursor:pointer;
-` 
-//Functions to support styled components
+  
 
-const SetProperties=(color, size)=>{
-  return (`
-    color:${color};
-    font-size:${size};
-  `)
-}
+  &:hover{
+    box-shadow: inset 0 0 5px black;
+  }
+` 

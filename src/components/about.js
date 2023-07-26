@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import foto from '../assets/foto.jpg';
 import { colors } from '../styles/colors';
+import { useState, useEffect } from 'react';
 
 //main function
 export default function About() {
@@ -60,6 +61,7 @@ const Title=styled.div`
   text-align:left;
   text-shadow: 1px 1px 1px #000;
 `
+
 const Paragraph=styled.div`
   color: rgb(66, 84, 117);
   font-family: Lato;
