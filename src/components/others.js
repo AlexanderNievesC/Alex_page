@@ -34,7 +34,7 @@ export default function Other() {
                 </Autocad>
 
                 <Notion>
-                    <ButtonZone link1={"https://www.notion.so/ec98deb001bd4e44a79461c3513ff0c7?v=b900bdf5e44148fa96fc418b1f386a15&pvs=4"}/>    
+                    <ButtonZone link1={"https://spiky-pineapple-e55.notion.site/ec98deb001bd4e44a79461c3513ff0c7?v=b900bdf5e44148fa96fc418b1f386a15&pvs=4"}/>    
                 </Notion>                     
             </Images>
         </Container>
