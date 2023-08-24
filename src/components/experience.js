@@ -56,12 +56,12 @@ const data=[
 //main function
 export default function Experience() {
   return (
-    <div>
+    <div id="experience">
       <Language>
         <Title1>Experience & Education</Title1>
       </Language>
 
-      <Container id="experience">
+      <Container >
         <VerticalTimeline lineColor='gray'>
 
         {data.map(item => (
@@ -81,14 +81,6 @@ export default function Experience() {
 }
 //styled components
 
-const Title =styled.div`
-  font-family: "Roboto Slab";
-  font-weight: 700;
-  font-size: 41.4px;
-  color:${colors.black};
-  padding-bottom:50px;
-  padding-top:40px;
-`
 const Container=styled.div`
   display:flex;
   flex-direction:column;
@@ -114,18 +106,15 @@ const Language=styled.div`
   text-align:center;
   padding:40px;
   gap:20px;
+  line-height: 0.5;
   background-color:${colors.gray[300]};
 `
 const Title1 =styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 41.4px;
+  line-height: 1;
   color:${colors.black};
   padding-top:20px;
-`
-const Subtitle=styled.div`
-  color:rgb(109, 219, 154);
-  font-family: "Roboto Slab";
-  font-weight: 700;
-  font-size: 19.76px;
+  height:90px;
 `

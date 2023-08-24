@@ -28,7 +28,7 @@ const ButtonZone= (props)=>{
 
 export default function Portfolio() {
   return (
-    <div>
+    <div id="portfolio">
       <Title1>
             Portfolio
       </Title1>

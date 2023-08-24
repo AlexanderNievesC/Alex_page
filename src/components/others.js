@@ -4,6 +4,7 @@ import tesis from '../assets/Tesis.JPG';
 import mapa from '../assets/mapa.JPG';
 import autocad from '../assets/autocad.JPG';
 import notion from '../assets/notion.jpg';
+import React from 'react';
 
 const ButtonZone= (props)=>{
     return (
@@ -15,7 +16,7 @@ const ButtonZone= (props)=>{
 
 export default function Other() {
     return (
-        <Container>
+        <Container id="others">
             <Title>Others</Title>
             <Images>
                 <JobDiv>

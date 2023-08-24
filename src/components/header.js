@@ -1,40 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
-import background from '../assets/programming.jpg';
 import coding from '../assets/coding.gif';
 import { colors } from '../styles/colors';
 import { TiSocialLinkedinCircular } from 'react-icons/ti';
-import { TiSocialTwitterCircular } from 'react-icons/ti';
 import { DiGithub } from 'react-icons/di';
 import { Link} from 'react-scroll'
-import { FaBars } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 //Main Function
 export default function Header() {
   return (
-    <MainContainer id="header">
+      <MainContainer id="header">
+        {/* Section1 */}
+        <Section1>
+          <OptionBar>
+            <Link to="about"> <OptionElement>About</OptionElement></Link>
+            <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
+            <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
+            <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
+            <Link to="others"> <OptionElement>Others</OptionElement></Link>
+          </OptionBar>
 
-      <OptionBar>
-       <Link to="about"> <OptionElement>About</OptionElement></Link>
-       <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
-       <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
-       <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
-       <Link to="contact"> <OptionElement>Others</OptionElement></Link>
-      </OptionBar>
+          <StyledMenuIcon />
+        </Section1>
 
-      <SubArea>
-        <SectionText>
-          <Text primary>Alexander Nieves</Text>
-          <Text size="41.4px">Full Stack Developer</Text>
-          <a href="cv.pdf" download={"cv.pdf"}><Button > Download my CV</Button></a>
-        </SectionText>
+        {/* Section2 */}
+        <SubArea>
+          <SectionText>
+            <Text primary>Alexander Nieves</Text>
+            <Text >Full Stack Developer</Text>
+            <a href="cv.pdf" download={"cv.pdf"}><Button > Download my CV</Button></a>
+          </SectionText>
 
-        <SectionIcon>
-          <Links href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></Links>
-          <Links href="https://github.com/AlexanderNievesC"><DiGithub color="white" size={50}/></Links>
-        </SectionIcon>
-      </SubArea>
-    </MainContainer>
+          <SectionIcon>
+            <Links href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><TiSocialLinkedinCircular color="white" size={50}/></Links>
+            <Links href="https://github.com/AlexanderNievesC"><DiGithub color="white" size={50}/></Links>
+          </SectionIcon>
+        </SubArea>
+      </MainContainer> 
   )
 }
 //Styled components
@@ -43,22 +46,26 @@ const MainContainer=styled.div`
   background-size:cover;  
   height:500px;
 
-  @media screen and (max-width: 360px){
-    height:400px;
+  @media screen and (max-width: 600px){
+    height:500px;
   }
 `
+
+const Section1 =styled.div`
+  display:flex;
+  flex-direction:row;
+  justify-content: right;
+  padding:20px;
+`
+
 const OptionBar=styled.div`
   display:flex;
   flex-direction:row;
-  gap:20px;
   color:${colors.white};
-  justify-content: right;
-  padding-top:20px;
-  padding-right:20px;
-  align-items:center;
+  gap:20px;
 
-  @media screen and (max-width: 360px){
-    gap:10px;
+  @media screen and (max-width: 600px){
+    display:none;
   }
 `
 
@@ -74,24 +81,32 @@ const OptionElement=styled.div`
     font-size:15px;
   }
 `
+
+const StyledMenuIcon = styled(AiOutlineMenu)`
+  color: white;
+  display:none;
+
+  @media screen and (max-width: 600px){
+    display:block;
+    font-size: 30px
+  }
+`;
+ 
 const Text=styled.div`
   font-family: 'Roboto Slab', serif;
-  font-size: ${props => props.primary ? "60px" : "41.4px"};
+  font-size: 40px;
   justify-content: center;
-  text-shadow: 1px 1px 1px #000;
-  color:${props => props.primary ? "white" : "rgb(73, 175, 115)"};;
+  text-shadow: 1px 1px 1px black;
+  color:${props => props.primary ? "white" : "rgb(73, 175, 115)"};
 
-  @media screen and (max-width: 596px){   
-    font-size:50px;
-  }
-
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 600px){
     flex-wrap:wrap;   
-    font-size:30px;
+    font-size:40px;
+    line-height: 0.9;
   }
 
   &:hover{
-    font-size: ${props => props.primary ? "4rem" : "3rem"};
+    text-shadow: ${props => props.primary ? "1px 1px 1px black" : "1px 1px 1px white"};
   }
 `
 const SubArea=styled.div`
@@ -102,17 +117,16 @@ const SubArea=styled.div`
 const SectionText=styled.div`
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
   text-align:center;
-  gap:50px;
+  gap:30px;
   width:95%;
 
-  @media screen and (max-width: 596px){   
+  @media screen and (max-width: 600px){   
     gap:20px;
   }
-
 `
+
 const SectionIcon=styled.div`
   right:20px;
   top:300px;

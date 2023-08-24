@@ -109,6 +109,10 @@ export default function AboutDetail() {
   const MainContainer=styled.div`
   height:350px;
   background-color:${colors.black};
+
+  @media screen and (max-width: 600px){
+    height:700px;
+  }
 `
 
 const Container=styled.div`
