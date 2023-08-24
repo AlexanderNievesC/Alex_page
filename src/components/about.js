@@ -12,16 +12,13 @@ export default function About() {
         <Title>I code ...</Title>
         <br/>
         <Paragraph>
-          <div>I have a deep passion for programming and data analysis. Passion that I discovered while working as a mining engineer.</div>  
-          <br/>
-          <div>Today I would like to work as a full stack developer to create quality software.</div>
-          <br/>
-          <div>"I believe that technology is becoming a great tool for humanity to overcome the problems that we all face now"</div>
+        <div>Through programming, I firmly believe that I can improve people's lives and productivity in a company </div>
+        <br/> 
+        <div>That's the reason I seek to create quality software, preparing myself every day to achieve mastery.</div>  
         </Paragraph> 
       </div>
       <SecondPart>
         <TitleSecond>I live in Peru, Lima</TitleSecond>
-        <Year>28 years old</Year>
         <StyledImg src={foto} alt="my_photo" width="200px"/>
       </SecondPart>
     </Container>
@@ -86,16 +83,6 @@ const TitleSecond=styled.div`
   font-weight: 700;
   font-size: 31.52px;
   padding-bottom:30px;
-  
-`
-const Year=styled.div`
-  color: rgb(73, 175, 115);
-  font-weight: 500;
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 17.76px;
-  line-height: 1.4;
-  padding-bottom:20px;
   
 `
 const SecondPart=styled.div`

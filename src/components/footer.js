@@ -7,10 +7,10 @@ export default function Footer() {
   return (  
     <Container>
        <Link to="about"> <OptionElement>About</OptionElement></Link>
-       <Link to="skills"> <OptionElement>Skills</OptionElement></Link>
        <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
        <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
        <Link to="contact"> <OptionElement>Contact</OptionElement></Link>
+       <Link to="others"> <OptionElement>Others</OptionElement></Link>
     </Container>
   )
 }
@@ -23,7 +23,7 @@ const Container=styled.div`
   align-content:center;
   justify-content:center;
   align-items:center;
-  background-color:${colors.black};
+  background-color:white;
   height:100px;
 
   @media screen and (max-width: 360px){
@@ -32,7 +32,7 @@ const Container=styled.div`
 `
 const OptionElement=styled.div`
 
-  color:${colors.white};
+  color:${colors.black};
   cursor:pointer;
 
   &:hover {

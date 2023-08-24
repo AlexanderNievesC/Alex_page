@@ -1,7 +1,6 @@
 import React,{useRef} from 'react'
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
-import { BsTwitter,BsGithub,BsLinkedin } from 'react-icons/bs';
 import emailjs from '@emailjs/browser';
 
 
@@ -24,27 +23,15 @@ export default function Contact() {
 
   return (
     <Container id="contact">
-      <SubContainer>
         <Title>Contact me</Title>
-        <Subtitle>
-          <div>Please contact me via this form and I will reply back within 24 hours.</div>
-          <div>Or call me at +51 959922344</div>
-          <div>This is my email <u>paulalexander.nieves@gmail.com</u></div>
-          <div>Find me on:</div>
-          <IconZone>
-            <a href="https://github.com/AlexanderNievesC"  ><BsGithub color="rgb(73, 175, 115)" size={20}/></a>
-            <a href="https://www.linkedin.com/in/alexander-nieves-6669bb136/" ><BsLinkedin color="rgb(73, 175, 115)" size={20}/></a>
-          </IconZone>
-        </Subtitle>
-      </SubContainer>
-      <SubContainer>
-        <StyledForm ref={form} onSubmit={sendEmail}>
-          <InputStyled type="text" name="user_name" placeholder="Name" main></InputStyled>
-          <InputStyled type="text" name="user_email"  placeholder="Email" main></InputStyled>
-          <InputStyled type="text" name="message" placeholder="Leave a message here"></InputStyled>
-          <Button>Send</Button>
-        </StyledForm>
-      </SubContainer>
+        <SubContainer>
+          <StyledForm ref={form} onSubmit={sendEmail}>
+            <InputStyled type="text" name="user_name" placeholder="¿What's your name?" main></InputStyled>
+            <InputStyled type="text" name="user_email"  placeholder="¿What's your email?" main></InputStyled>
+            <InputStyled type="text" name="message" placeholder="Leave your message here"></InputStyled>
+            <Button>Send</Button>
+          </StyledForm>
+        </SubContainer>
     </Container>
   )
 }
@@ -52,12 +39,13 @@ export default function Contact() {
 //styled components
 const Container=styled.div`
   display:flex;
-  flex-direction:row;
-  justify-content:space-between;
+  flex-direction:column;
+  gap:10px;
   height:420px;
   background-color:${colors.gray[300]};
   padding:30px;
   align-items:center;
+  align-content:center;
 
   @media screen and (max-width: 596px){   
     padding:30px;
@@ -71,29 +59,19 @@ const Container=styled.div`
 const SubContainer=styled.div`
   display:flex;
   flex-direction:column;
+  align-items:center;
 
 `
 const StyledForm=styled.form`
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:10px;
 `
 const Title=styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 31.52px;
-  padding-bottom:20px;
-`
-const Subtitle=styled.div`
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 35px;
-`
-const IconZone= styled.div`
-  display:flex;
-  flex-direction:row;
-  gap:20px;
+  padding:20px;
 `
 const InputStyled=styled.input`
   display:flex;
@@ -103,7 +81,7 @@ const InputStyled=styled.input`
   padding:20px;
   border-radius:${props=>props.main? "50px":"25px"};
   height:${props=>props.main? "47px":"120px"};
-  width:320px;
+  width:600px;
   border:0.1px solid gray;
   font-size:14px;
 
@@ -116,7 +94,6 @@ const Button=styled.button`
   border: none;
   border-radius: 50px;
   background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
-  max-width: 100px;
   height:40px;
   color:${colors.white};
   text-shadow: 1px 1px 1px #000;

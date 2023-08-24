@@ -1,73 +1,86 @@
 import React from 'react'
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
-import guy from '../assets/programme.jpeg';
-import imaginery from '../assets/imaginery.jpg';
+import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component'
+import 'react-vertical-timeline-component/style.min.css'
+import { FaSuitcase,FaUniversity } from 'react-icons/fa';
+
 //data
 const data=[
   {
   key:1,
   school:"National University of San Agustin of Arequipa",
-  title:"Mining Engineer (2011 - 2015)"
+  title:"Mining Engineer (2011 - 2015)",
+  icon:<FaUniversity/>
   },
   
   {
   key:2,
-  school:"GORE",
-  title:"Mining Technical Assistant (2017-2018)"
-
+  school:"Regional Government of Arequipa",
+  title:"Mining Analyst (2017-2018)",
+  icon:<FaSuitcase/>
   },
 
   {
   key:3,
   school:"SIMSA/PAN AMERICAN",
   title:"Mining Intern (2019)",
+  icon:<FaSuitcase/>
   },
   
   {
   key:4,
-  school:"CIBERTEC/CODEABLE",
-  title:"Data Architect-Full Stack Developer (2020-2023)"
+  school:"CIBERTEC",
+  title:"Data Architect (2020-2023)",
+  icon:<FaUniversity/>
   },
+  {
+    key:5,
+    school:"CODEABLE",
+    title:"Full Stack Developer (2022)",
+    icon:<FaUniversity/>
+    },
+  {
+      key:6,
+      school:"OEFA/BUREAU VERITAS",
+      title:"Supervisor (2022)",
+      icon:<FaSuitcase/>
+  },
+  {
+    key:6,
+    school:"MS4M",
+    title:"Application Analyst (2023)",
+    icon:<FaSuitcase/>
+},
 ]
 //main function
 export default function Experience() {
   return (
-    <Container id="experience">
-      <Title>Experience</Title>
-      <SubContainer>
-        <Image src={guy} alt="guy" height="290px" width="450px"></Image>
-        <Text1>
-          <First><b>Education</b></First>
-          <SimpleText>2022 <br/> Full Stack Developer <br/>Codeable</SimpleText>
-          <br/>
-          <SimpleText>2020-2022 <br/> Data Architect <br/>Cibertec</SimpleText>
-          <br/>
-          <SimpleText>2011-2015 <br/> Mining Engineer <br/>UNSA</SimpleText>
-        </Text1>
-      </SubContainer>
+    <div>
+      <Language>
+        <Title1>Experience & Education</Title1>
+      </Language>
 
-      <SubContainer>
-        <Text2>
-          <First><b>Work Experience</b></First>
-            <SimpleText>2017-2018 <br/> Mining Assistant <br/>GORE</SimpleText>
-            <br/>
-            <SimpleText>2019 <br/> Mining Intern <br/>PAN AMERICAN</SimpleText>
-            <br/>
-            <SimpleText>2021-2022 <br/> Supervisor <br/>OEFA</SimpleText>
-            <br/>
-            <SimpleText>2023 <br/> Application Analyst <br/>MS4M</SimpleText>
-          </Text2>
-          <Image src={imaginery} alt="guy" height="290px" width="450px"></Image>
-      </SubContainer>
-      <br></br>
-      <br></br>
-      <br></br>
-      <Title id="portfolio">My Portfolio</Title>
-    </Container>
+      <Container id="experience">
+        <VerticalTimeline lineColor='gray'>
+
+        {data.map(item => (
+          <VerticalTimelineElement
+            iconStyle={{background:'rgb(109, 219, 154)'}}
+            icon={item.icon} 
+          >
+              <p>{item.school}</p>
+              <p>{item.title}</p>
+          </VerticalTimelineElement> 
+        ))}
+          
+        </VerticalTimeline>
+      </Container>
+    </div>
   )
 }
 //styled components
+
 const Title =styled.div`
   font-family: "Roboto Slab";
   font-weight: 700;
@@ -79,7 +92,8 @@ const Title =styled.div`
 const Container=styled.div`
   display:flex;
   flex-direction:column;
-  height:950px;
+  height:1500px;
+  padding:50px;
   background-color:${colors.gray[300]};
   padding-top:10px;
   text-align:center;
@@ -92,75 +106,26 @@ const Container=styled.div`
     height:1250px;
   }
 `
-const SubContainer=styled.div`
+const Language=styled.div`
   display:flex;
-  flex-direction:row;
-  justify-content:center;
-  padding:10px;
+  flex-direction:column;
+  background-color:${colors.black};
   align-items:center;
-
-  @media screen and (max-width: 596px){   
-    padding:10px;
-    justify-content:center;
-    align-content:center;
-    align-items:center;
-  }
-
-  @media screen and (max-width: 360px){
-    flex-wrap:wrap;
-  }
+  text-align:center;
+  padding:40px;
+  gap:20px;
+  background-color:${colors.gray[300]};
 `
-const Text1=styled.div`
-  display:flex;
-  flex-direction:column;
-  height:300px;
-  width:400px;
-  text-align:left;
-  padding-left:40px;
-
-  @media screen and (max-width: 596px){   
-    width:100%;
-  }
-
-  @media screen and (max-width: 360px){   
-    padding-left:0px;
-    padding-top:10px;
-    text-align:center;
-  }
+const Title1 =styled.div`
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 41.4px;
+  color:${colors.black};
+  padding-top:20px;
 `
-const First=styled.div`
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 17.76px;
-  padding-bottom:10px;
-`
-const Text2=styled.div`
-  display:flex;
-  flex-direction:column;
-  height:300px;
-  width:450px;
-  text-align:right;
-  padding-right:40px;
-
-  @media screen and (max-width: 360px){   
-    padding-right:0px;
-    padding-bottom:20px;
-    text-align:center;
-  }
-`
-const SimpleText=styled.div`
-  color: rgb(66, 84, 117);
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 13px;
-`
-const Image=styled.img`
-    @media screen and (max-width: 596px){   
-    height:250px;
-    width:330px;
-  }
-
-  @media screen and (max-width: 360px){   
-    height:180px;
-  }
+const Subtitle=styled.div`
+  color:rgb(109, 219, 154);
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 19.76px;
 `

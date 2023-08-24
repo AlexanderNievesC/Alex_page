@@ -16,7 +16,6 @@ export default function Header() {
 
       <OptionBar>
        <Link to="about"> <OptionElement>About</OptionElement></Link>
-       <Link to="skills"> <OptionElement>Skills</OptionElement></Link>
        <Link to="experience"> <OptionElement>Experience</OptionElement></Link>
        <Link to="portfolio"> <OptionElement>Portfolio</OptionElement></Link>
        <Link to="contact"> <OptionElement>Contact</OptionElement></Link>

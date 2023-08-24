@@ -11,10 +11,10 @@ import { AiFillGithub as GithubSymbol } from 'react-icons/ai';
 
 const ButtonZone= (props)=>{
   return (
-    <Main>
-      <Button><a href={props.link1}><Lupa color="white" size="20px"/></a></Button>
-      <Button><a href={props.link2}><GithubSymbol color="white" size="20px"/></a></Button>
-    </Main>
+      <Main>
+        <Button><a href={props.link1}><Lupa color="white" size="20px"/></a></Button>
+        <Button><a href={props.link2}><GithubSymbol color="white" size="20px"/></a></Button>
+      </Main>
   );
 }
 
@@ -26,32 +26,38 @@ const ButtonZone= (props)=>{
   height:50px;
  `
 
-
 export default function Portfolio() {
   return (
-   <Container> 
-    <JobDiv>
-      <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}
-                  link2={"https://github.com/AlexanderNievesC/get-that-job"}/>
-    </JobDiv>
-    <Keepabl>
-      <ButtonZone link1={"https://keepable-alex.netlify.app/"}
-                  link2={"https://github.com/AlexanderNievesC/keepable"} />
-    </Keepabl>
-    <Contactable>
-      <ButtonZone link1={"https://contactable.netlify.app/"}
-                  link2={"https://github.com/AlexanderNievesC/contactable"} />
-    </Contactable>
-    <Doabl>
-      <ButtonZone link1={"/"}
-                  link2={"/"} />
-    </Doabl>
-    <Organizabl>
-      <ButtonZone link1={"/"}
-                  link2={"/"} />
-    </Organizabl>
-  </Container>
+    <div>
+      <Title1>
+            Portfolio
+      </Title1>
+
+    <Container> 
+      <JobDiv>
+        <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}
+                    link2={"https://github.com/AlexanderNievesC/get-that-job"}/>
+      </JobDiv>
+      <Keepabl>
+        <ButtonZone link1={"https://keepable-alex.netlify.app/"}
+                    link2={"https://github.com/AlexanderNievesC/keepable"} />
+      </Keepabl>
+      <Contactable>
+        <ButtonZone link1={"https://contactable.netlify.app/"}
+                    link2={"https://github.com/AlexanderNievesC/contactable"} />
+      </Contactable>
+      <Doabl>
+        <ButtonZone link1={"/"}
+                    link2={"/"} />
+      </Doabl>
+      <Organizabl>
+        <ButtonZone link1={"/"}
+                    link2={"/"} />
+      </Organizabl>
+    </Container>
+  </div>
   )
+  
 }
 
 const Container=styled.div`
@@ -64,8 +70,7 @@ const Container=styled.div`
    height:100%;
    justify-content:center;
    padding:50px;
-  
-   background-color:${colors.black};
+   background-color:black;
 
    @media screen and (max-width: 360px){
      display:flex;
@@ -74,6 +79,20 @@ const Container=styled.div`
      height:900px;
    }
  `
+
+const Title1 =styled.div`
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 41.4px;
+  background-color:${colors.black};
+  padding-top:20px;
+  height:60px;
+  text-align:center;
+  background-color:black;
+  color:white;
+  padding:40px;
+`
+
  const JobDiv=styled.div`
    display:flex;
    flex-direction:column;
@@ -164,14 +183,4 @@ const Container=styled.div`
    right:38%;
    cursor:pointer;
  ` 
- const Github=styled.button`
-   border: none;
-   border-radius: 50px;
-   background:linear-gradient(-180deg, rgb(109, 219, 154) 0%, rgb(73, 175, 115) 96%) no-repeat;
-   width: 37px;
-   height:40px;
-   color:${colors.white};
-   box-shadow: 3px 3px 3px black;
-   right:38%;
-   cursor:pointer;
- ` 
+ 

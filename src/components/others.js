@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../styles/colors'
 import { SlMagnifier as Lupa } from 'react-icons/sl';
-import { AiFillGithub as GithubSymbol } from 'react-icons/ai';
 import tesis from '../assets/Tesis.JPG';
 import mapa from '../assets/mapa.JPG';
 import autocad from '../assets/autocad.JPG';
@@ -18,8 +16,7 @@ const ButtonZone= (props)=>{
 export default function Other() {
     return (
         <Container>
-            <Title>Other projects</Title>
-            <div>Take a look at some of my other projects and my blog </div>
+            <Title>Others</Title>
             <Images>
                 <JobDiv>
                     <ButtonZone link1={"https://repositorio.unsa.edu.pe/server/api/core/bitstreams/4371974a-4a22-49dc-a13a-33a0c20e1ad0/content"}/>    
@@ -42,15 +39,23 @@ export default function Other() {
 }
 
 const Container=styled.div`
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
     height:100%;
-    padding:30px;
+    padding:10px;
+    background-color:black
 `
 
 const Title=styled.div`
+
   font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 31.52px;
-  padding-bottom:20px;
+  padding:40px;
+  color:white
+
 `
 const Images=styled.div`
     display: flex;
