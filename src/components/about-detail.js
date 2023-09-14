@@ -29,7 +29,7 @@ const data=[
 
   {
   id:3,
-  title:"HTML & CSS",
+  title:"HTML/CSS",
   icon:<AiFillHtml5 size={40} color="rgb(109, 219, 154)"/>,
   to:"portfolio"
   },
@@ -63,13 +63,7 @@ const data=[
     title:"AWS",
     icon:<FaAws size={40} color="rgb(109, 219, 154)"/>,
     to:"portfolio"
-  },
-  {
-    id:11,
-    title:"PowerBi",
-    icon:<SiPowerbi size={40} color="rgb(109, 219, 154)"/>,
-    to:"portfolio"
-  },
+  }
 ]
 //main function
 export default function AboutDetail() {
