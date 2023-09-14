@@ -29,16 +29,9 @@ const data=[
 
   {
   id:3,
-  title:"HTML",
+  title:"HTML & CSS",
   icon:<AiFillHtml5 size={40} color="rgb(109, 219, 154)"/>,
   to:"portfolio"
-  },
-
-  {
-    id:4,
-    title:"CSS",
-    icon:<DiCss3 size={40} color="rgb(109, 219, 154)"/>,
-    to:"portfolio"
   },
 
   {
@@ -63,12 +56,6 @@ const data=[
     id:8,
     title:"Linux",
     icon:<FaLinux size={40} color="rgb(109, 219, 154)"/>,
-    to:"portfolio"
-  },
-  {
-    id:9,
-    title:"Excel",
-    icon:<AiFillFileExcel size={40} color="rgb(109, 219, 154)"/>,
     to:"portfolio"
   },
   {
