@@ -28,7 +28,7 @@ const ButtonZone= (props)=>{
 
 export default function Portfolio() {
   return (
-    <div id="portfolio">
+    <MainContainer id="portfolio">
       <Title1>
             Portfolio
       </Title1>
@@ -55,10 +55,14 @@ export default function Portfolio() {
                     link2={"/"} />
       </Organizabl>
     </Container>
-  </div>
+  </MainContainer>
   )
   
 }
+
+const MainContainer=styled.div`
+  
+`
 
 const Container=styled.div`
    display:flex;
@@ -75,8 +79,9 @@ const Container=styled.div`
    @media screen and (max-width: 360px){
      display:flex;
      flex-direction:column;
-     gap:10px;   
-     height:900px;
+     gap:30px;   
+     height:2500px;
+     padding:0px;
    }
  `
 

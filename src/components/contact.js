@@ -47,13 +47,9 @@ const Container=styled.div`
   align-items:center;
   align-content:center;
 
-  @media screen and (max-width: 596px){   
-    padding:30px;
-  }
-
   @media screen and (max-width: 360px){   
     flex-wrap:wrap;
-    height:700px;
+    height:500px;
   }
 `
 const SubContainer=styled.div`

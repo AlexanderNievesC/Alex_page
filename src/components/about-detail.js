@@ -91,8 +91,10 @@ export default function AboutDetail() {
   height:350px;
   background-color:${colors.black};
 
+
   @media screen and (max-width: 600px){
-    height:700px;
+    height:800px;
+    gap:40px;
   }
 `
 
@@ -107,17 +109,12 @@ const Container=styled.div`
   align-items:center;
   text-align:center;
   justify-content:center;
-  padding:20px 250px;
 
-
-  @media screen and (max-width: 700px){   
-    gap:40px;
-    padding:10px 10px;
-  }
 
   @media screen and (max-width: 360px){   
-    height:800px;
-    flex-wrap:wrap;
+    display:flex;
+    flex-direction:row;
+    gap:40px;
   }
 `
 const ContElement=styled.div`
@@ -141,13 +138,6 @@ const Language=styled.div`
 const Title=styled.div`
   font-size: 20px;
   font-family: "Roboto Slab";
-`
-const LinkStyled=styled(Link)`
-  display:flex;
-  align-items:center;
-  color:rgb(109, 219, 154);
-  cursor:pointer;
-  text-decoration:none;
 `
 const Title1 =styled.div`
   font-family: "Roboto Slab";

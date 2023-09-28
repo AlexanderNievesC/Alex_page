@@ -110,9 +110,18 @@ const Text=styled.div`
   }
 `
 const SubArea=styled.div`
-  padding-top:100px;
+  padding-top:50px;
   display:flex;
   flex-direction:row;
+
+  @media screen and (max-width: 600px){
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    gap:40px;
+  }
+
 `
 const SectionText=styled.div`
   display:flex;
@@ -134,6 +143,11 @@ const SectionIcon=styled.div`
   flex-direction:column;
   align-items:flex-end;
   gap:10px;
+
+  @media screen and (max-width: 600px){   
+    display:flex;
+    flex-direction:row;
+  }
   
 `
 

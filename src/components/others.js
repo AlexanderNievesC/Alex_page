@@ -46,7 +46,12 @@ const Container=styled.div`
     align-items:center;
     height:100%;
     padding:10px;
-    background-color:black
+    background-color:black;
+
+    @media screen and (max-width: 350px){   
+      padding:0px;
+      height:1900px;
+  }
 `
 
 const Title=styled.div`
@@ -68,6 +73,12 @@ const Images=styled.div`
     align-items:center;
     align-self:center;
     align-content:center;
+
+    @media screen and (max-width: 596px){   
+      padding:4px;
+  }
+
+
 `
 const Main=styled.div`
 display:flex;

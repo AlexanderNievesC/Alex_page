@@ -27,6 +27,8 @@ const Container=styled.div`
   height:100px;
 
   @media screen and (max-width: 360px){
+    display:flex;
+    flex-wrap:wrap;
     gap:10px;
   }
 `

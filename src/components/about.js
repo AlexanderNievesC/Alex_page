@@ -18,7 +18,7 @@ export default function About() {
         </Paragraph> 
       </div>
       <SecondPart>
-        <TitleSecond>I live in Peru, Lima</TitleSecond>
+        <TitleSecond>I live in Peru</TitleSecond>
         <StyledImg src={foto} alt="my_photo" width="200px"/>
       </SecondPart>
     </Container>
@@ -32,7 +32,7 @@ const Container =styled.div`
   padding:20px;
   align-items:center;
   align-content: center;
-  gap:40px;
+  gap:60px;
   justify-content:center;
   text-align:center;
   background-color:${colors.gray[300]};
@@ -40,7 +40,7 @@ const Container =styled.div`
 
 
   @media screen and (max-width: 596px){   
-    gap:20px;
+    gap:60px;
   }
 
   @media screen and (max-width: 360px){
