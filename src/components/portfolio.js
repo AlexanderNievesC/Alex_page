@@ -13,7 +13,6 @@ const ButtonZone= (props)=>{
   return (
       <Main>
         <Button><a href={props.link1}><Lupa color="white" size="20px"/></a></Button>
-        <Button><a href={props.link2}><GithubSymbol color="white" size="20px"/></a></Button>
       </Main>
   );
 }
@@ -35,24 +34,23 @@ export default function Portfolio() {
 
     <Container> 
       <JobDiv>
-        <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}
-                    link2={"https://github.com/AlexanderNievesC/get-that-job"}/>
+        <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}/>
       </JobDiv>
       <Keepabl>
         <ButtonZone link1={"https://keepable-alex.netlify.app/"}
-                    link2={"https://github.com/AlexanderNievesC/keepable"} />
+                     />
       </Keepabl>
       <Contactable>
         <ButtonZone link1={"https://contactable.netlify.app/"}
-                    link2={"https://github.com/AlexanderNievesC/contactable"} />
+                    />
       </Contactable>
       <Doabl>
         <ButtonZone link1={"/"}
-                    link2={"/"} />
+                     />
       </Doabl>
       <Organizabl>
         <ButtonZone link1={"/"}
-                    link2={"/"} />
+                     />
       </Organizabl>
     </Container>
   </MainContainer>
