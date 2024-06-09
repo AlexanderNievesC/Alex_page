@@ -45,7 +45,7 @@ export default function Portfolio() {
                     />
       </Contactable>
       <Doabl>
-        <ButtonZone link1={"/"}
+        <ButtonZone link1={"https://doableapp1alexander.netlify.app/"}
                      />
       </Doabl>
       <Organizabl>
