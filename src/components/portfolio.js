@@ -49,7 +49,7 @@ export default function Portfolio() {
                      />
       </Doabl>
       <Organizabl>
-        <ButtonZone link1={"/"}
+        <ButtonZone link1={"https://organizablealexander.netlify.app/"}
                      />
       </Organizabl>
     </Container>
