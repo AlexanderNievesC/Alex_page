@@ -34,9 +34,6 @@ export default function Portfolio() {
       </Title1>
 
     <Container> 
-      <JobDiv>
-        <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}/>
-      </JobDiv>
       <Keepabl>
         <ButtonZone link1={"https://keepable-alex.netlify.app/"}
                      />
@@ -57,6 +54,9 @@ export default function Portfolio() {
         <ButtonZone link1={"https://alexandergithub.netlify.app/"}
                      />
       </GithubProjects>
+      <JobDiv>
+        <ButtonZone link1={"https://get-that-job-nieves.netlify.app/"}/>
+      </JobDiv>
     </Container>
   </MainContainer>
   )
