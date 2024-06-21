@@ -5,6 +5,7 @@ import keepableimg from '../assets/keepable.jpg';
 import Contactabl from '../assets/Contactable.jpg';
 import Doable from '../assets/Doable.jpg';
 import Organizable from '../assets/Organizable.png';
+import GithubProject from '../assets/Github_Stats.png';
 import { colors } from '../styles/colors'
 import { SlMagnifier as Lupa } from 'react-icons/sl';
 import { AiFillGithub as GithubSymbol } from 'react-icons/ai';
@@ -52,21 +53,28 @@ export default function Portfolio() {
         <ButtonZone link1={"https://main--alexanderorganz.netlify.app/"}
                      />
       </Organizabl>
+      <GithubProjects>
+        <ButtonZone link1={"https://alexandergithub.netlify.app/"}
+                     />
+      </GithubProjects>
     </Container>
   </MainContainer>
   )
   
 }
 
-const MainContainer=styled.div`
-  
+const MainContainer = styled.div`
+  display:flex;
+  flex-direction:column;
+  background-color:red;
 `
+
 
 const Container=styled.div`
    display:flex;
    flex-direction:row;
    flex-wrap:wrap;
-   gap:10px;
+   gap:50px;
    align-items:center;
    text-align:center;
    height:100%;
@@ -151,6 +159,21 @@ const Title1 =styled.div`
    height:500px;
    background-size:cover;
    justify-content:flex-end;
+   padding:20px;
+
+   @media screen and (max-width: 360px){   
+     width:90%;
+     height:400px;
+   }
+ `
+
+ const GithubProjects=styled.div`
+  display:flex;
+   flex-direction:column;
+   background-image:url(${GithubProject});
+   width:300px;
+   height:500px;
+   background-size:cover;
    padding:20px;
 
    @media screen and (max-width: 360px){   
